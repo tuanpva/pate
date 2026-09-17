@@ -295,4 +295,6 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 19; pointer-event
   .film-strip { animation: none !important; }
   .secret-button { min-height: 44px; padding: 10px 13px 10px 11px; font-size: 9px; letter-spacing: .07em; }
   .secret-button::before { width: 7px; height: 7px; flex-basis: 7px; }
+  .new-memory-close { width: 100%; height: auto; aspect-ratio: 4 / 3; margin: 72px 0 0; }
+  .new-memory-close img { object-position: center center; }
 }
