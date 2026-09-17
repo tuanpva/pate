@@ -297,4 +297,21 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 19; pointer-event
   .secret-button::before { width: 7px; height: 7px; flex-basis: 7px; }
   .new-memory-close { width: 100%; height: auto; aspect-ratio: 4 / 3; margin: 72px 0 0; }
   .new-memory-close img { object-position: center center; }
+  .final-image { width: 100%; height: auto; aspect-ratio: 1206 / 2120; margin-left: 0; background: #d7dee2; }
+  .final-image img { object-fit: contain; object-position: center center; }
+  .header-actions { gap: 8px; }
+  .icon-button { width: auto; min-width: 82px; padding: 9px 10px; gap: 7px; border: 1px solid rgba(24, 41, 52, .22); border-radius: 999px; background: rgba(255, 251, 247, .56); }
+  .music-label { display: inline; font-size: 8px; letter-spacing: .08em; white-space: nowrap; }
+}
+
+.film-strip { width: 100%; overflow-x: auto; animation: none; }
+.film-track { display: flex; gap: 18px; width: max-content; animation: drift 36s linear infinite; }
+
+@media (max-width: 700px) {
+  .film-strip { overflow-x: hidden; }
+  .film-track { gap: 14px; animation: drift 48s linear infinite; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-track { animation: none; }
 }
