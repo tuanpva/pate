@@ -2,6 +2,12 @@ const musicToggle = document.querySelector('#musicToggle');
 const music = document.querySelector('#bgMusic');
 const secretButton = document.querySelector('#secretButton');
 const secretMessage = document.querySelector('#secretMessage');
+music.volume = 0.22;
+
+music.addEventListener('error', () => {
+  musicToggle.querySelector('.music-label').textContent = 'sound off';
+  musicToggle.setAttribute('aria-label', 'Turn music on');
+});
 
 musicToggle.addEventListener('click', async () => {
   if (!music.src) {
